@@ -3,23 +3,7 @@ def confusion_matrix(y_true, y_pred):
     Calculate confusion matrix for binary classification.
     Returns: TP, FP, FN, TN
     """
-    if len(y_true) != len(y_pred):
-        raise ValueError("y_true and y_pred must have the same length.")
-
-    tp = 0
-    fp = 0
-    fn = 0
-    tn = 0
-
-    for true_label, pred_label in zip(y_true, y_pred):
-        if true_label == 1 and pred_label == 1:
-            tp += 1
-        elif true_label == 0 and pred_label == 1:
-            fp += 1
-        elif true_label == 1 and pred_label == 0:
-            fn += 1
-        else:
-            tn += 1
+  
 
     return tp, fp, fn, tn
 
